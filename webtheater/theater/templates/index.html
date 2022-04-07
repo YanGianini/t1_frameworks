@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>WebTheater</title>
 </head>
 <body>
@@ -13,7 +15,13 @@
     {% for categoria in categorias %}
         <div>
             <p>{{ categoria.get_nome }}</p>
-            <img src="{{categoria.get_img}}" alt="">
+            <img src="{% static 'img/car.png' %}" alt="">
+        </div>
+        <div>
+            {% for video in categoria.get_videos %}
+                <a href="{% url 'content' video.get_id %}"><h3>{{ video.get_titulo }}</h3></a>
+                <p>{{ video.get_desc }}</p>
+            {% endfor %}
         </div>
     {% endfor %}
     </div>

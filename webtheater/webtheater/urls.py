@@ -19,5 +19,6 @@ from theater import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name="index" )
+    path('', views.index, name="index" ),
+    path('video/<id>', views.content, name="content")
 ]
