@@ -15,7 +15,7 @@
     {% for categoria in categorias %}
         <div>
             <p>{{ categoria.get_nome }}</p>
-            <img src="{% static 'img/car.png' %}" alt="">
+            <img src="{% static 'img/' %}{{ categoria.get_img }}" alt="">
         </div>
         <div>
             {% for video in categoria.get_videos %}
