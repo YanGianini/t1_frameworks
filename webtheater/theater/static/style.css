@@ -3,9 +3,28 @@ body {
     margin-left: 10%;
 }
 
+h1{
+    font-size: 36pt;
+    font-family:sans-serif;
+}
+
+h2{
+    font-size: 22pt;
+    font-family: sans-serif;
+}
+
+h3{
+    font-size: 20;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
 img.catimg {
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
 }
 
 img.videoimg {
@@ -13,21 +32,25 @@ img.videoimg {
     height: 160px;
 }
 
-div#categoria{
-    background-color: blue;
-}
-
 div#videos{
     display: flex;
     flex-direction: row;
-    background-color: brown;
     text-align: center;
     justify-content: space-around;
+    
+}
+
+div.cat_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
 }
 
 div.video_cat{
     display: block;
-    background-color: azure;
     height: 40vh;
-    width: 60vh;
+    width: 40vh;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5%;
 }

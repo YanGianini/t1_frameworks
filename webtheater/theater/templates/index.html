@@ -13,9 +13,9 @@
     <h2>Categorias:</h2>
     <div id="categoria">
         {% for categoria in categorias %}
-            <div>
-                <p>{{ categoria.get_nome }}</p>
+            <div class="cat_head">
                 <img src="{% static 'img/' %}{{ categoria.get_img }}" alt="" class="catimg">
+                <h3>{{ categoria.get_nome }}</h3>
             </div>
             <div id="videos">
                 {% for video in categoria.get_videos %}
