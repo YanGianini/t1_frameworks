@@ -11,19 +11,24 @@
 <body>
     <h1>WebTheater</h1>
     <h2>Categorias:</h2>
-    <div>
-    {% for categoria in categorias %}
-        <div>
-            <p>{{ categoria.get_nome }}</p>
-            <img src="{% static 'img/' %}{{ categoria.get_img }}" alt="">
-        </div>
-        <div>
-            {% for video in categoria.get_videos %}
-                <a href="{% url 'content' video.get_id %}"><h3>{{ video.get_titulo }}</h3></a>
-                <p>{{ video.get_desc }}</p>
-            {% endfor %}
-        </div>
-    {% endfor %}
+    <div id="categoria">
+        {% for categoria in categorias %}
+            <div>
+                <p>{{ categoria.get_nome }}</p>
+                <img src="{% static 'img/' %}{{ categoria.get_img }}" alt="" class="catimg">
+            </div>
+            <div id="videos">
+                {% for video in categoria.get_videos %}
+                <div class="video_cat">
+                    <a href="{% url 'content' video.get_id %}"><h3>{{ video.get_titulo }}</h3></a>
+                    <img src="{%static 'img/'%}{{ video.get_urli }}" alt="" class="videoimg">
+                    <p>{{ video.get_desc }}</p><p>{{ video.get_likes }} likes</p>
+                </div>
+                {% empty %}
+                    <p> Sem videos :( </p>
+                {% endfor %}
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>

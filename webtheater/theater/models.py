@@ -34,12 +34,15 @@ class Categoria():
         self._videos.append(video)
 
 class Video():
-    def __init__(self, id, titulo, urlv, urli, desc) -> None:
+    def __init__(self, id, titulo, urlv, urli, desc, likes, vzl, data_pub):
         self._id = id
         self._titulo = titulo
         self._urlv = urlv
         self._urli = urli
         self._desc = desc
+        self._likes = likes
+        self._vzl = vzl
+        self._data_pub = data_pub
 
     def get_id(self):
         return self._id
@@ -50,19 +53,19 @@ class Video():
     def get_titulo(self):
         return self._titulo
 
-    def set_img(self, titulo):
+    def set_titulo(self, titulo):
         self._titulo = titulo
 
     def get_urlv(self):
         return self._urlv
 
-    def set_img(self, urlv):
+    def set_urlv(self, urlv):
         self._urlv = urlv
 
     def get_urli(self):
         return self._urli
 
-    def set_img(self, urli):
+    def set_urli(self, urli):
         self._urli = urli
 
     def get_desc(self):
@@ -70,3 +73,22 @@ class Video():
 
     def set_desc(self, desc):
         self._desc = desc
+
+    def get_likes(self):
+        return self._likes
+
+    def set_likes(self, likes):
+        self._likes = likes
+
+    def get_vzl(self):
+        return self._vzl
+
+    def set_vzl(self, vzl):
+        self._vzl = vzl
+
+    def get_data_pub(self):
+        return self._data_pub
+
+    def set_vzl(self, data_pub):
+        self._data_pub = data_pub
+  

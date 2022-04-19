@@ -3,7 +3,31 @@ body {
     margin-left: 10%;
 }
 
-img {
+img.catimg {
+    width: 160px;
+    height: 160px;
+}
+
+img.videoimg {
     width: 250px;
     height: 160px;
+}
+
+div#categoria{
+    background-color: blue;
+}
+
+div#videos{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    text-align: center;
+    justify-content: space-around;
+}
+
+div.video_cat{
+    display: block;
+    background-color: azure;
+    height: 40vh;
+    width: 60vh;
 }
